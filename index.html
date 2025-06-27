@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ניצה פארק - דף נחיתה</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('https://i.imgur.com/ypM0AFe.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .backdrop {
+      backdrop-filter: blur(6px);
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body class="text-white font-sans min-h-screen flex items-center justify-center">
+
+  <div class="backdrop w-full min-h-screen flex flex-col items-center justify-center text-center px-4 py-8">
+
+    <h1 class="text-5xl md:text-7xl font-bold mb-4 text-yellow-400 drop-shadow-lg">
+      ניצה ישראל
+    </h1>
+    <p class="text-xl md:text-2xl text-white mb-6">ניצה – אני בדרך!</p>
+
+    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+      <button onclick="copyIP()" class="bg-yellow-500 hover:bg-yellow-600 px-6 py-3 rounded-xl shadow-xl text-lg">
+        🎮 העתק כתובת השרת
+      </button>
+      <a href="https://discord.gg/Xn4kRRnn" target="_blank" class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-xl shadow-xl text-lg">
+        📲 הצטרף לדיסקורד
+      </a>
+    </div>
+
+    <div class="bg-white bg-opacity-10 p-6 rounded-xl max-w-xl shadow-xl">
+      <p class="text-lg mb-2">🎢 לונה פארק ענק במיינקראפט – בדיוק כמו לונה פארק תל אביב!</p>
+      <p class="text-lg mb-2">👾 מתקנים, משימות, דמויות מונפשות, Resource Pack מותאם אישית</p>
+      <p class="text-lg mb-2">📅 פתיחה רשמית: <strong>26 ביולי 2025</strong></p>
+      <p class="text-lg">🔥 הצטרפו עכשיו ושריינו מקום!</p>
+    </div>
+
+  </div>
+
+  <script>
+    function copyIP() {
+      const ip = "play.nitzapark.net";
+      navigator.clipboard.writeText(ip).then(() => {
+        alert("כתובת השרת הועתקה: " + ip);
+      });
+    }
+  </script>
+
+</body>
+</html>
